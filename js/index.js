@@ -1,11 +1,29 @@
 
 $(document).ready(function(){
-    //获取页面数据
+    //播放音乐
+    function playMusic(path) {
+        console.log(1111111111)
+        var audioEle = document.getElementById("audio");
+        audioEle.src=path;
+        audioEle.load();
+        if (audioEle.paused){ /*如果已经暂停*/
+            console.log(222222222)
+            audioEle.play();   //播放
+        }else {
+            console.log(333333)
+            audioEle.pause();  //暂停
+        }
+    }
+    playMusic('https://y.qq.com/n/yqq/song/000CvzPu14YABC.html#comment_box');
+
+
+
+
+    /*//获取页面数据
     var ticket = 'sd-100';
     $.get("http://adv.qclike.cn/api/goods/info?ticket"+ticket, function(result){
         $("div").html(result);
     });
-
 
     $('.keyboard-cover').hide();
     //选择具体时间
@@ -44,8 +62,6 @@ $(document).ready(function(){
         $('.keyboard-cover').hide();
 
     });
-   
-
     //点击提交
     $('#subbox').on('click',function () {
         var name = $('#name').val().replace(/(^\s*)|(\s*$)/g,"");
@@ -113,11 +129,7 @@ $(document).ready(function(){
         },1000)
 
     })
-
-
-
-
-
+*/
 
 })
 

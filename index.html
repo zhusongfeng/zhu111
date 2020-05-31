@@ -24,9 +24,10 @@
 </head>
 <body>
 <div id="app" >
+    <audio  muted id="audio" src="" loop autoplay></audio>
     <div class="wine-container">
         <img src="image/img1.png" alt="" class="wine-img">
-        <img src="image/img2.png" alt="" class="wine-img">
+        <img src="image/‫img2.png" alt="" class="wine-img">
         <img src="image/img3.png" alt="" class="wine-img">
 
         <!--表单内容-->
@@ -35,22 +36,22 @@
             <div class="package">
                 <ul class="personal-information">
                     <li>
-                        <div>姓名：<span>*</span></div>
+                        <div>姓名</div>
                         <br>
                         <input type="text"  id="name" >
                     </li>
                     <li>
-                        <div>手机号码：<span>*</span></div>
+                        <div>手机号码</div>
                         <br>
                         <input type="tel"  id="mobile" maxlength="11">
                     </li>
                     <li>
-                        <div>微信号：<span>*</span></div>
+                        <div>微信号</div>
                         <br>
                         <input type="text"  id="weChat" >
                     </li>
                     <li>
-                        <div>预约时间：<span>*</span></div>
+                        <div>预约时间</div>
                     </li>
                     <li>
                         <input readonly class="form-control" type="text" id="startTime"  >
@@ -61,8 +62,9 @@
                 </ul>
 
                 <div class="subbox" >
+                    <span class="info">手机号和微信号选填一项即可</span>
                     <span id="subbox" class="confirm">确认</span>
-                    <span class="info">一風堂上海iapm环贸店</span>
+
                 </div>
 
                 <div class="logo" ></div>
@@ -90,37 +92,5 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/rolldate.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<!--<script type="text/javascript">
-    window.onload = function() {
-        //选择具体时间
-        new Rolldate({
-            el: '#endTime',
-            format: 'hh:mm'
-        });
-        //选择日期
-        new Rolldate({
-            el: '#startTime',
-            format: 'YYYY-MM-DD',
-            beginYear: 2000,
-            endYear: 2100,
-            init: function() {
-                console.log('插件开始触发');
-            },
-            moveEnd: function(scroll) {
-                console.log(scroll)
-                console.log('滚动结束');
-            },
-            confirm: function(date) {
-                // $('#startTime').val(date)
-                console.log('确定按钮触发');
-            },
-            cancel: function() {
-                console.log('插件运行取消');
-            }
-        })
-    }
-</script>-->
-
-
 
 </html>
