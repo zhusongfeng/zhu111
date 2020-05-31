@@ -1,32 +1,44 @@
 
 $(document).ready(function(){
-    //播放音乐
+ /*   //播放音乐
     function playMusic(path) {
         console.log(1111111111)
         var audioEle = document.getElementById("audio");
-        audioEle.src=path;
-        audioEle.load();
-        console.log(5555555555,audioEle.networkState)
-        if (audioEle.paused){ /*如果已经暂停*/
+        // audioEle.src=path;
+        // audioEle.load();
+        if (audioEle.paused){ /!*如果已经暂停*!/
             console.log(222222222)
-            if(audioEle.networkState == 3){
-                audioEle.play();   //播放
-            }
+            audioEle.play();   //播放
 
         }else {
             console.log(333333)
             audioEle.pause();  //暂停
         }
     }
-    playMusic('./js/music.mp3');
-
-
-    $('#app').on('click',function () {
-        console.log(444444)
-        document.getElementById("audio").play()
-
+    setTimeout(time)
+    var  time = setInterval(function () {
+        playMusic('http://music.163.com/song/media/outer/url?id=504924216.mp3');
+    },1000)*/
+    // $('.wine-container').trigger("click");
+    var i = 0;
+    var audios = document.getElementById('audios');
+    $('.wine-container').click(function () {
+        console.log(5555555555)
+        $("#audios").attr('src','http://music.163.com/song/media/outer/url?id=504924216.mp3');
+        var seii = setInterval(function() {
+            (i == 36000) ? i = 0 : i++;
+            if(audios.paused) {
+                clearInterval(seii)
+            }
+        }, 30);
+        if(audios.paused) {
+            audios.play();
+        } else {
+            audios.pause();
+        }
 
     })
+
 
     /*//获取页面数据
     var ticket = 'sd-100';
@@ -139,6 +151,7 @@ $(document).ready(function(){
 
     })
 */
+    $('.wine-container').trigger("click");
 
 })
 

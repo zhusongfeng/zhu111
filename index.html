@@ -19,9 +19,12 @@
         .picker-item{
             font-size: 18px;
         }
-        .video{
+        .video,.audios{
             width: 0;
             height: 0;
+        }
+        audio{
+            display: none !important;
         }
 
     </style>
@@ -29,8 +32,7 @@
 <body>
 <div id="app" >
     <div class="video">
-        <video id="audio" preload="none"   muted src="js/music.mp3" > </video>
-
+        <audio id="audios"  controls autoplay loop class="audios" src="http://music.163.com/song/media/outer/url?id=504924216.mp3"></audio>
     </div>
     <div class="wine-container">
         <img src="image/img1.png" alt="" class="wine-img">
@@ -99,5 +101,24 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/rolldate.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<!--<script>
+    var i = 0;
+    var oPlay = document.getElementsByClassName("wine-container")[0];
+    var audios = document.getElementById('audios');
+    oPlay.onclick = function() {
+        $("#audios").attr('src','http://music.163.com/song/media/outer/url?id=504924216.mp3');
+        var seii = setInterval(function() {
+            (i == 36000) ? i = 0 : i++;
+            if(audios.paused) {
+                clearInterval(seii)
+            }
+        }, 30);
+        if(audios.paused) {
+            audios.play();
+        } else {
+            audios.pause();
 
+        }
+    }
+</script>-->
 </html>
