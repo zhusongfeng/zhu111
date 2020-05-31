@@ -19,12 +19,19 @@
         .picker-item{
             font-size: 18px;
         }
+        .video{
+            width: 0;
+            height: 0;
+        }
 
     </style>
 </head>
 <body>
 <div id="app" >
-    <audio  muted id="audio" src="" loop autoplay></audio>
+    <div class="video">
+        <video id="audio" preload="none" loop  muted src="audio/Anan%20Ryoko-Refrain.mp3" crossOrigin = "Anonymous"> </video>
+
+    </div>
     <div class="wine-container">
         <img src="image/img1.png" alt="" class="wine-img">
         <img src="image/‫img2.png" alt="" class="wine-img">
